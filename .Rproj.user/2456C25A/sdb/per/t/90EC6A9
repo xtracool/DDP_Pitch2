@@ -1,0 +1,16 @@
+{
+    "contents" : "---\ntitle       : Car vs Car\nsubtitle    : Developing Data Products Course Project\nauthor      : Ven Reddy\njob         : \nframework   : io2012        # {io2012, html5slides, shower, dzslides, ...}\nhighlighter : highlight.js  # {highlight.js, prettify, highlight}\nhitheme     : tomorrow      # \nwidgets     : []            # {mathjax, quiz, bootstrap}\nmode        : selfcontained # {standalone, draft}\nknit        : slidify::knit2slides\n---\n## Introduction\n\nThis is an application that loads Motor Trend's Car Data (mtcars) and allows\na person to compare two cars against each other using the UI rather\nthan a command line.\n\n\n```{r, echo=FALSE}\nlibrary(dplyr)\ndata(mtcars)\nmtcars$names <- rownames(mtcars)\nhead(mtcars)\n```\n\n--- .class #id \n## Side panel \n\nThe side panel allows you to pick two cars, an attribute to plot.  Click on \nthe Submit button to have the application show you the comparison of both cars.\n\n--- .class #id\n## Main panel\n\nThe main panel shows you what cars that you have selected and also shows\nthe various attributes for each car such as mpg, cylinders, horsepower, etc.\n\nFor example:\n\n```{r}\n# show two cars\ndata(mtcars)\nmtcars$names <- rownames(mtcars)\nf <- c(\"Datsun 710\", \"Valiant\")\nfilter(mtcars, names %in% f)\n\n```\n\n\n--- .class #id\n## Thank you\n\nThank you for using this application.  I am sure that you will agree that\nfor the non-R programmer this is a much easier way of comparing two cars\nagainst each other.",
+    "created" : 1448171423014.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2983211560",
+    "id" : "90EC6A9",
+    "lastKnownWriteTime" : 1448173499,
+    "path" : "~/Coursera/Data Science/Developing Data Products/coureProjectSlidify/DDP_Pitch/index.Rmd",
+    "project_path" : "index.Rmd",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_markdown"
+}

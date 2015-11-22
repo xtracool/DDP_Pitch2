@@ -1,0 +1,56 @@
+---
+title       : Car vs Car
+subtitle    : Developing Data Products Course Project
+author      : Ven Reddy
+job         : 
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+## Introduction
+
+This is an application that loads Motor Trend's Car Data (mtcars) and allows
+a person to compare two cars against each other using the UI rather
+than a command line.
+
+
+```{r, echo=FALSE}
+library(dplyr)
+data(mtcars)
+mtcars$names <- rownames(mtcars)
+head(mtcars)
+```
+
+--- .class #id 
+## Side panel 
+
+The side panel allows you to pick two cars, an attribute to plot.  Click on 
+the Submit button to have the application show you the comparison of both cars.
+
+--- .class #id
+## Main panel
+
+The main panel shows you what cars that you have selected and also shows
+the various attributes for each car such as mpg, cylinders, horsepower, etc.
+
+For example:
+
+```{r}
+# show two cars
+data(mtcars)
+mtcars$names <- rownames(mtcars)
+f <- c("Datsun 710", "Valiant")
+filter(mtcars, names %in% f)
+
+```
+
+
+--- .class #id
+## Thank you
+
+Thank you for using this application.  I am sure that you will agree that
+for the non-R programmer this is a much easier way of comparing two cars
+against each other.
